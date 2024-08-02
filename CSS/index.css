@@ -1,4 +1,3 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +8,10 @@
   --primary-color: hsl(280, 1%, 50%);
   --secondary-color: whitesmoke;
   --navbar-background-color: rgb(5, 86, 113);
+  --section-background-color: hsl(0, 0%, 100%);
+  --section-height: min-content;
 }
 
-/* Navigation Bar */
 nav {
   background-color: var(--navbar-background-color);
 }
@@ -31,16 +31,15 @@ nav {
 }
 
 .hamburger-menu {
-  display: none; /* Hide hamburger menu by default */
-  font-size: 2rem;
+  display: none;
   color: var(--secondary-color);
   cursor: pointer;
-  z-index: 1100; /* Ensure it's above other elements */
+  z-index: 1100;
 }
 
 /* Menu List */
 .ul-list {
-  display: flex; /* Show menu items horizontally by default */
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -54,7 +53,7 @@ nav {
 .ul-list li a {
   color: var(--secondary-color);
   text-decoration: none;
-  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  padding: 0.5rem 1rem;
   font-size: 1.1rem;
 }
 
@@ -62,19 +61,13 @@ nav {
   color: var(--primary-color);
 }
 
-/* Hero Section Start */
 main div h1 {
   text-align: center;
   padding-bottom: 10px;
-}
-
-/* WebDevelopment Section Start */
-#webdevelopment {
-  background-color: var(--secondary-color);
-  height: min-content;
   padding: 20px 0px;
 }
 
+/* courses Section CSS Start*/
 .courses {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -128,46 +121,54 @@ main div h1 {
 
 .add-cart {
   display: flex;
+  flex-direction: column;
   justify-content: end;
-  align-items: end;
+  align-items: center;
   height: 100%;
 }
 .course .add-to-cart:hover {
   background-color: #0056b3;
 }
+/* courses Section CSS End */
+
+/* WebDevelopment Section Start */
+#webdevelopment {
+  background-color: var(--secondary-color);
+  height: var(--section-height);
+}
 
 /* IT Certificate Section Start */
 #itcertificate {
-  background-color: hsl(0, 0%, 100%);
-  height: 100vh;
+  background-color: var(--section-background-color);
+  height: var(--section-height);
 }
 
 /* Leadership Section Start */
 #leadership {
-  background-color: hsl(0, 0%, 100%);
-  height: 100vh;
+  background-color: var(--section-background-color);
+  height: var(--section-height);
 }
 
 /* DataScience Section Start */
 #datascience {
-  background-color: hsl(0, 0%, 100%);
-  height: 100vh;
+  background-color: var(--section-background-color);
+  height: var(--section-height);
 }
 
 /*communication Section Start*/
 #communication {
-  background-color: hsl(0, 0%, 100%);
-  height: 100vh;
+  background-color: var(--section-background-color);
+  height: var(--section-height);
 }
 /*communication Section End*/
 
 /* Business Analytics Section Start */
 #businessanalytics {
-  background-color: hsl(0, 0%, 100%);
-  height: 100vh;
+  background-color: var(--section-background-color);
+  height: var(--section-height);
 }
 
-/* Media Queries */
+/* Screen Sizes CSS */
 @media screen and (max-width: 1200px) {
   .ul-list li a {
     text-decoration: none;
@@ -200,7 +201,7 @@ main div h1 {
     display: block;
     font-size: 2rem;
     font-weight: bold;
-    z-index: 1100; /* Ensure it's above other elements */
+    z-index: 1100;
   }
 
   .logo {
@@ -304,9 +305,9 @@ main div h1 {
 @media screen and (max-width: 768px) {
   .hamburger-menu {
     display: block;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    z-index: 1100; /* Ensure it's above other elements */
+    z-index: 1100;
   }
 
   .logo {
@@ -357,7 +358,7 @@ main div h1 {
 @media screen and (max-width: 460px) {
   .hamburger-menu {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 
@@ -382,7 +383,7 @@ main div h1 {
     background-color: var(--navbar-background-color);
     text-align: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     z-index: 1000;
     overflow-y: auto;
   }
@@ -395,13 +396,10 @@ main div h1 {
     background: none;
   }
 
-  li {
-    font-size: 1.5rem;
-  }
-
   .ul-list li a {
     padding: 0.2rem;
     width: 100%;
+    font-size: 1.4rem;
   }
 
   .ul-list.active {
