@@ -1,23 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: hsl(280, 1%, 50%);
-  --secondary-color: whitesmoke;
-  --navbar-background-color: rgb(5, 86, 113);
-  --section-background-color: hsl(0, 0%, 100%);
-  --section-height: min-content;
-}
-
 nav {
   background-color: var(--navbar-background-color);
 }
 
 .nav-container {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -37,138 +24,6 @@ nav {
   z-index: 1100;
 }
 
-/* Menu List */
-.ul-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
-}
-
-.ul-list li {
-  position: relative;
-}
-
-.ul-list li a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.1rem;
-}
-
-.ul-list li a:hover {
-  color: var(--primary-color);
-}
-
-main div h1 {
-  text-align: center;
-  padding-bottom: 10px;
-  padding: 20px 0px;
-}
-
-/* courses Section CSS Start*/
-.courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.course {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.course h4 {
-  font-size: 1.5rem;
-}
-
-.course p {
-  margin: 8px 0;
-  text-align: justify;
-  line-height: 1.4rem;
-}
-
-.course .price {
-  font-weight: bold;
-  color: #333;
-}
-
-.course button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background-color: #007bff;
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.add-cart {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  height: 100%;
-}
-.course .add-to-cart:hover {
-  background-color: #0056b3;
-}
-/* courses Section CSS End */
-
-/* WebDevelopment Section Start */
-#webdevelopment {
-  background-color: var(--secondary-color);
-  height: var(--section-height);
-}
-
-/* IT Certificate Section Start */
-#itcertificate {
-  background-color: var(--section-background-color);
-  height: var(--section-height);
-}
-
-/* Leadership Section Start */
-#leadership {
-  background-color: var(--section-background-color);
-  height: var(--section-height);
-}
-
-/* DataScience Section Start */
-#datascience {
-  background-color: var(--section-background-color);
-  height: var(--section-height);
-}
-
-/*communication Section Start*/
-#communication {
-  background-color: var(--section-background-color);
-  height: var(--section-height);
-}
-/*communication Section End*/
-
-/* Business Analytics Section Start */
-#businessanalytics {
-  background-color: var(--section-background-color);
-  height: var(--section-height);
-}
-
-/* Screen Sizes CSS */
 @media screen and (max-width: 1200px) {
   .ul-list li a {
     text-decoration: none;
@@ -196,6 +51,7 @@ main div h1 {
     color: hsl(216, 95%, 50%);
   }
 }
+
 @media screen and (max-width: 950px) {
   .hamburger-menu {
     display: block;
@@ -273,7 +129,7 @@ main div h1 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     background-color: var(--navbar-background-color);
     text-align: center;
     justify-content: center;
@@ -395,6 +251,9 @@ main div h1 {
   .ul-list li a:hover {
     background: none;
   }
+  li {
+    font-size: 1.5rem;
+  }
 
   .ul-list li a {
     padding: 0.2rem;
@@ -409,5 +268,31 @@ main div h1 {
   /* Hero Section */
   .courses {
     grid-template-columns: 1fr;
+  }
+
+  .front-images {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .social {
+    display: flex;
+  }
+
+  .social li a img {
+    display: flex;
+    width: 30px;
+    height: 30px;
+  }
+  .social li a :hover {
+    width: 35px;
+    height: 35px;
+  }
+  .social li {
+    list-style: none;
   }
 }
