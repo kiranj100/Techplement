@@ -1,0 +1,204 @@
+@import url("responsivemobile.css");
+@import url("course-card.css");
+@import url("footer-section.css");
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url('../Fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../Fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Black'), local('Roboto-Black'), url('../Fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+:root {
+  --primary-color: hsl(276, 14%, 65%);
+  --secondary-color: #ffffff;
+  --navbar-background-color: rgb(43, 166, 206);
+  --section-background-color: hsl(0, 0%, 100%);
+  --section-height: min-content;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Menu List */
+
+
+
+
+main div h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  padding: 20px 0px;
+}
+
+/*Welcome Section and Images Start*/
+
+.Welcome img {
+  height: 600px;
+  width: 600px;
+}
+
+.Welcome {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 95vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-weight: 900;
+  background: #292626;
+}
+
+.Welcome p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+  width: 36rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.welcome-text h1 {
+  font-size: 4.5rem;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+
+}
+
+.color-span {
+  color: rgba(251, 9, 211, 0.764)
+}
+
+/*Welcome Section and Images End*/
+
+
+/*Achievement Section Start*/
+.achievement-sections {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0px;
+  justify-items: center;
+}
+
+.achievement-sections h3 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.achievement {
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 40px 0px;
+
+}
+
+.achievement-card {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 50px;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.achievement-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s linear;
+
+}
+
+.achieve-img {
+  border-radius: 50%;
+  padding: 10px;
+
+}
+
+.achieve-img img {
+  width: 30px;
+}
+
+.achievement-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-text span {
+  font-size: 2rem;
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+.achievement-text p {
+  font-family: 'Roboto';
+  font-weight: 400;
+
+}
+
+/*Achievement Section End*/
+
+
+/* Company Logo Section Start */
+.company-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 20px 0px;
+
+}
+
+.company-trust h3 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.company-Logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* Company Logo Section End */
