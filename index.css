@@ -1,0 +1,200 @@
+@import url("./CSS/course-card.css");
+@import url("./CSS/responsivemobile.css");
+@import url("./CSS/achievementSection.css");
+@import url("./CSS/footer-section.css");
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("../Fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("../Fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url("../Fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: gray;
+  --secondary-color: hsl(0, 0%, 100%);
+  --navbar-background-color: rgb(43, 166, 206);
+  --section-background-color: hsl(0, 0%, 100%);
+  --section-height: min-content;
+  --card-background-color: #292626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--card-background-color);
+  font-family: "Roboto";
+}
+
+/* Menu List */
+
+main div h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  padding: 20px 0px;
+}
+
+/*Welcome Section and Images Start*/
+
+.Welcome img {
+  height: 600px;
+  width: 600px;
+}
+
+.Welcome {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 95vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 900;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Welcome p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+  width: 36rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+.welcome-text h1 {
+  font-size: 4.5rem;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.color-span {
+  color: rgba(251, 9, 211, 0.764);
+}
+
+/*Welcome Section and Images End*/
+
+/* Up Arrow Key Section Css start */
+
+.uparrow {
+  position: fixed;
+  bottom: 10px;
+  right: 16px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.uparrow img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Up Arrow Key Section Css End */
+
+/* Company Logo Section Start */
+.company-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  padding: 40px 0px;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.company-trust h3 {
+  font-family: "Roboto";
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 20px 0px;
+
+  color: var(--secondary-color);
+}
+
+.company-Logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* Company Logo Section End */
+
+/*Instructor Section Start*/
+.teachers-pr {
+  text-align: center;
+  color: var(--secondary-color);
+  min-height: 35vh;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.teachers-card-position {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.teacher-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 16px;
+  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.3);
+  color: var(--secondary-color);
+  overflow: hidden;
+  gap: 0.7rem;
+}
+
+.teacher-card:hover {
+  transform: scale(1.08);
+  transition: all 0.2s ease-out;
+}
+
+.teacher-card img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+/*Instructor Section End*/
