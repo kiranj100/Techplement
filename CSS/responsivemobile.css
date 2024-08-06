@@ -51,6 +51,32 @@ nav {
   color: var(--primary-color);
 }
 
+@media screen and (max-width: 1440px) {
+  .achievement-sections {
+    min-height: 60vh;
+  }
+  .achievement-sections h3 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .achievement {
+    gap: 3rem;
+  }
+  .company-trust {
+    min-height: 40vh;
+  }
+
+  .teachers-pr {
+    min-height: 100vh;
+    padding: 40px 0px;
+  }
+  .teachers-pr h1 {
+    margin-bottom: 20px;
+  }
+  .teachers-card-position {
+    gap: 3rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .ul-list li a {
     text-decoration: none;
@@ -76,9 +102,24 @@ nav {
     height: 400px;
     width: 400px;
   }
+  .achievement-sections {
+    min-height: 60vh;
+  }
 
   .achievement {
     gap: 1rem;
+  }
+
+  .teachers-pr {
+    min-height: 100vh;
+    padding: 40px 0px;
+  }
+  .teachers-pr h1 {
+    margin-bottom: 20px;
+  }
+  .teachers-card-position {
+    gap: 3rem;
+    padding: 20px 0px;
   }
 }
 
@@ -136,11 +177,12 @@ nav {
   }
 
   .achievement {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 10px;
+    gap: 2.5rem;
+    padding: 20px;
+  }
+
+  .teachers-card-position {
+    padding: 20px;
   }
 }
 
@@ -200,230 +242,248 @@ nav {
     width: 600px;
   }
 
-  .achievement {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-    font-size: 2.2rem;
-    font-weight: bold;
-    z-index: 1100;
-  }
-
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  body.no-scroll {
-    overflow: hidden;
-  }
-
-  .ul-list {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    /* Fixed positioning for full-height menu */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--navbar-background-color);
-    text-align: center;
-    justify-content: center;
-    gap: 3rem;
-    z-index: 1000;
-    margin: 0% auto;
-    overflow-y: auto;
-  }
-
-  .ul-list li a {
-    color: var(--secondary-color);
-    font-size: 2rem;
-  }
-
-  .ul-list li a:hover {
-    color: var(--primary-color);
-    background: none;
-  }
-
-  .ul-list li a {
-    padding: 0.5rem;
-    width: 100%;
-  }
-
-  .ul-list.active {
-    display: flex;
-  }
-
-  .welcome-img {
-    width: 500px;
-    height: 500px;
-  }
   .achievement-sections {
-    padding: 20px 0px;
+    min-height: 60vh;
+    padding: 30px 60px;
   }
 
-  .achievement {
-    gap: 1rem;
+  @media screen and (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: bold;
+      z-index: 1100;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    .ul-list {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      /* Fixed positioning for full-height menu */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--navbar-background-color);
+      text-align: center;
+      justify-content: center;
+      gap: 3rem;
+      z-index: 1000;
+      margin: 0% auto;
+      overflow-y: auto;
+    }
+
+    .ul-list li a {
+      color: var(--secondary-color);
+      font-size: 2rem;
+    }
+
+    .ul-list li a:hover {
+      color: var(--primary-color);
+      background: none;
+    }
+
+    .ul-list li a {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .ul-list.active {
+      display: flex;
+    }
+
+    .welcome-img {
+      width: 500px;
+      height: 500px;
+    }
+    .achievement-sections {
+      padding: 40px 0px;
+    }
+
+    .achievement-sections h3 {
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+    .achievement {
+      gap: 3rem;
+    }
+
+    .achievement-card {
+      width: 40%;
+    }
+
+    .teachers-pr {
+      min-height: 100vh;
+      padding: 40px 0px;
+    }
+    .teachers-pr h1 {
+      margin-bottom: 20px;
+    }
+    .teachers-card-position {
+      gap: 3rem;
+      padding: 20px 0px;
+    }
   }
 
-  .achievement-card {
-    width: 45%;
-  }
+  @media screen and (max-width: 480px) {
+    .hamburger-menu {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+    }
 
-  .teachers-pr {
-    min-height: 45vh;
-    padding: 20px 0px;
-  }
-}
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
 
-@media screen and (max-width: 480px) {
-  .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-  }
+    body.no-scroll {
+      overflow: hidden;
+    }
 
-  .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
+    /* Navbar on mobile devices */
+    .ul-list {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--navbar-background-color);
+      text-align: center;
+      justify-content: center;
+      gap: 4rem;
+      z-index: 1000;
+      overflow-y: auto;
+    }
 
-  body.no-scroll {
-    overflow: hidden;
-  }
+    .ul-list li a {
+      color: aliceblue;
+    }
 
-  /* Navbar on mobile devices */
-  .ul-list {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--navbar-background-color);
-    text-align: center;
-    justify-content: center;
-    gap: 4rem;
-    z-index: 1000;
-    overflow-y: auto;
-  }
+    .ul-list li a:hover {
+      background: none;
+    }
 
-  .ul-list li a {
-    color: aliceblue;
-  }
+    li {
+      font-size: 2rem;
+    }
 
-  .ul-list li a:hover {
-    background: none;
-  }
+    .ul-list li a {
+      padding: 0.2rem;
+      width: 100%;
+      font-size: 1.4rem;
+    }
 
-  li {
-    font-size: 2rem;
-  }
+    .ul-list.active {
+      display: flex;
+    }
 
-  .ul-list li a {
-    padding: 0.2rem;
-    width: 100%;
-    font-size: 1.4rem;
-  }
+    /* Hero Section */
 
-  .ul-list.active {
-    display: flex;
-  }
+    .courses {
+      grid-template-columns: 1fr;
+    }
 
-  /* Hero Section */
+    .social li {
+      list-style: none;
+    }
 
-  .courses {
-    grid-template-columns: 1fr;
-  }
+    .welcome-text {
+      padding: 0px 12px;
+    }
 
-  .social li {
-    list-style: none;
-  }
+    .welcome-text h1 {
+      font-size: 2rem;
+    }
+    .welcome-text p {
+      font-size: small;
+    }
 
-  .welcome-text {
-    padding: 0px 12px;
-  }
+    .Welcome img {
+      width: 360px;
+      height: auto;
+      padding: 10px;
+    }
+    .achievement-sections {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 10px;
+    }
 
-  .welcome-text h1 {
-    font-size: 2rem;
-  }
-  .welcome-text p {
-    font-size: small;
-  }
+    .achievement {
+      gap: 2rem;
+    }
 
-  .Welcome img {
-    width: 360px;
-    height: auto;
-    padding: 10px;
-  }
-  .achievement-sections {
-    padding: 20px 0px;
-  }
-  .achievement-sections h3 {
-    padding: 0px 10px;
-  }
+    .achievement-card {
+      width: 80%;
+    }
+    /* Company Section Start */
+    .company-trust {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .company-trust h3 {
+      padding: 0px 16px;
+    }
 
-  .achievement {
-    gap: 1rem;
-  }
+    .company-Logo {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 90%;
+    }
+    /* Company Section End */
 
-  .achievement-card {
-    width: 90%;
-  }
-  /* Company Section Start */
-  .company-trust {
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    /* Teachers Section Start   */
+    .teachers-pr {
+      text-align: center;
+      min-height: 100vh;
+      padding: 50px 0px;
+    }
+    .teachers-pr h1 {
+      color: var(--secondary-color);
+      padding: 30px 10px;
+    }
+    .teachers-card-position {
+      gap: 3.5rem;
+    }
+    /* Teachers Section End   */
 
-  .company-Logo {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  /* Company Section End */
+    /* Footer Section Start */
 
-  /* Teachers Section Start   */
-  .teachers-pr {
-    text-align: center;
-    min-height: 100vh;
-  }
-  .teachers-pr h1 {
-    color: var(--secondary-color);
-    padding: 30px 10px;
-  }
-  /* Teachers Section End   */
+    .front-images {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0px;
+      min-height: 30vh;
+    }
 
-  /* Footer Section Start */
+    .social {
+      display: flex;
+      gap: 1srem;
+    }
 
-  .front-images {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0px;
-    min-height: 30vh;
+    /* Footer Section End */
   }
-
-  .social {
-    display: flex;
-    gap: 1srem;
-  }
-
-  /* Footer Section End */
 }
