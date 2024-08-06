@@ -179,17 +179,17 @@ upArrow.onclick = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // Initial check
+  checkVisibility();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkVisibility2);
-  checkVisibility2(); // Initial check
+  checkVisibility2();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkVisibility4);
-  checkVisibility4(); // Initial check
+  checkVisibility4();
 });
 
 // Animation for each section End
