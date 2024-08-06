@@ -31,72 +31,93 @@ document.querySelectorAll("#nav-links a").forEach((item) => {
 
 // navbar Section js End
 
-//WebDevelopment section js Start
-
-const generateCourseHTML = (courses) => {
+// courses Section Start
+const generateCourseHTML = (courses, formUrlBase, formFieldId) => {
   return courses
-    .map(
-      (course) => `
-    <div id="${course.id}" class="webdevelopment">
-      <div class="courses">
-        <div class="course ${course.title.replace(/\s+/g, "")}">
-          <h4>${course.title}</h4>
-          <p>${course.description}</p>
-          <div class="add-cart">
-            <span class="price">${course.price}</span>
-            <button class="add-to-cart">${course.button}</button>
+    .map((course) => {
+      const formUrl = `${formUrlBase}?usp=pp_url&${formFieldId}=${encodeURIComponent(
+        course.title
+      )}`;
+      return `
+          <div id="${course.id}" class="webdevelopment">
+            <div class="courses">
+              <div class="course ${course.title.replace(/\s+/g, "")}">
+                <h4>${course.title}</h4>
+                <p>${course.description}</p>
+                <div class="add-cart">
+                  <span class="price">${course.price}</span>
+                  <button><a href="${formUrl}" class="add-to-cart" target="_blank">${
+        course.button
+      }</a></button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  `
-    )
+        `;
+    })
     .join("");
 };
 
+// Example usage
+const formUrlBase =
+  "https://docs.google.com/forms/d/e/1FAIpQLSd2Ie6OHmVpJhD1Gnmj9GTjrWXUfb-KNABPC7ajECLNN7mRrw/viewform";
+const formFieldId = "entry.2079092631";
+
 // Web Development Section JS Start
-
-const webDevelopmentHTML = generateCourseHTML(webdevData);
+const webDevelopmentHTML = generateCourseHTML(
+  webdevData,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".webdevelopment").innerHTML = webDevelopmentHTML;
-
 // Web Development Section JS End
 
 // IT Certificate Section JS Start
-
-const itCertificateHTML = generateCourseHTML(itCertificateCourses);
+const itCertificateHTML = generateCourseHTML(
+  itCertificateCourses,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".itcertificate").innerHTML = itCertificateHTML;
-
 // IT Certificate Section JS End
 
-// Add similar code for other sections if needed
-
 // Business Data Section JS Start
-
-const businessDataHTML = generateCourseHTML(businessData);
+const businessDataHTML = generateCourseHTML(
+  businessData,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".businessanalytics").innerHTML = businessDataHTML;
-
 // Business Data Section JS End
 
 // Communication Data Section JS Start
-
-const communicationDataHTML = generateCourseHTML(communicationData);
+const communicationDataHTML = generateCourseHTML(
+  communicationData,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".communication").innerHTML = communicationDataHTML;
-
 // Communication Data Section JS End
 
 // Data Science Section JS Start
-
-const dataScienceHTML = generateCourseHTML(datascience);
+const dataScienceHTML = generateCourseHTML(
+  datascience,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".datascience").innerHTML = dataScienceHTML;
-
 // Data Science Section JS End
 
 // Leadership Courses Section JS Start
-
-const leadershipCoursesHTML = generateCourseHTML(leadershipCourses);
+const leadershipCoursesHTML = generateCourseHTML(
+  leadershipCourses,
+  formUrlBase,
+  formFieldId
+);
 document.querySelector(".leadership").innerHTML = leadershipCoursesHTML;
-
 // Leadership Courses Section JS End
+
+// course Section End
 
 // Achivement Section Start
 
