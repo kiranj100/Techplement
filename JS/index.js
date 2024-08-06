@@ -4,6 +4,7 @@ import { businessData } from "../Data/businessData.js";
 import { communicationData } from "../Data/communicationData.js";
 import { datascience } from "../Data/datascience.js";
 import { leadershipCourses } from "../Data/leadershipCourses.js";
+import { companyLogo } from "../Data/companyLogo.js";
 import { instructors } from "../Data/instructor.js";
 import { achievement } from "../Data/Achievement.js";
 
@@ -137,6 +138,16 @@ console.log(achieve);
 document.querySelector(".achievement").innerHTML = achieve;
 // Achivement Section End
 
+// Company Logo Section Start
+let Company = "";
+companyLogo.forEach((logo) => {
+  Company += `<img src=${logo.image} />`;
+});
+
+document.querySelector(".company-Logo").innerHTML = Company;
+
+// Company Logo Section End
+
 // Instructors Section JS Start
 
 let InstructorsHTML = "";
@@ -171,22 +182,3 @@ upArrow.onclick = function () {
 };
 
 // Arrow Key js End
-
-// Animation for each section start
-
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", checkVisibility);
-  checkVisibility();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", checkVisibility2);
-  checkVisibility2();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", checkVisibility4);
-  checkVisibility4();
-});
-
-// Animation for each section End
