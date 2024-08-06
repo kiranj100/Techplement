@@ -6,9 +6,6 @@ import { datascience } from "../Data/datascience.js";
 import { leadershipCourses } from "../Data/leadershipCourses.js";
 import { instructors } from "../Data/instructor.js";
 import { achievement } from "../Data/Achievement.js";
-import { checkVisibility } from "./Animations.js";
-import { checkVisibility2 } from "./Animations.js";
-import { checkVisibility4 } from "./Animations.js";
 
 // navbar Section js start
 
@@ -45,9 +42,9 @@ const generateCourseHTML = (courses, formUrlBase, formFieldId) => {
           <div id="${course.id}" class="webdevelopment">
             <div class="courses">
               <div class="course ${course.title.replace(/\s+/g, "")} ">
-                <h4 class="section">${course.title}</h4>
-                <p class="section">${course.description}</p>
-                <div class="add-cart section">
+                <h4 >${course.title}</h4>
+                <p >${course.description}</p>
+                <div class="add-cart ">
                   <span class="price">${course.price}</span>
                   <button><a href="${formUrl}" class="add-to-cart" target="_blank">${
         course.button
@@ -128,9 +125,9 @@ let achieve = "";
 achievement.forEach((item) => {
   achieve += `  <div class="achievement-card ">
             <div class="achieve-img ">
-              <img src="${item.image}" class="section"/>
+              <img src="${item.image}" />
             </div>
-            <div class="achievement-text section">
+            <div class="achievement-text ">
               <span>${item.title}</span>
               <p>${item.description}</p>
             </div>
@@ -146,9 +143,9 @@ let InstructorsHTML = "";
 instructors.forEach((element) => {
   InstructorsHTML += ` 
         <div class="teacher-card "> 
-           <img src="${element.image}" alt="${element.Name}" class="section"/>
-           <h2 class="section">${element.Name}</h2>
-           <h5 class="section">${element.branch_name}</h5>
+           <img src="${element.image}" alt="${element.Name}" />
+           <h2 >${element.Name}</h2>
+           <h5>${element.branch_name}</h5>
         </div>
 `;
 });
