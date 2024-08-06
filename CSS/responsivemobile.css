@@ -369,6 +369,9 @@ nav {
   .achievement-sections {
     padding: 20px 0px;
   }
+  .achievement-sections h3 {
+    padding: 0px 10px;
+  }
 
   .achievement {
     gap: 1rem;
